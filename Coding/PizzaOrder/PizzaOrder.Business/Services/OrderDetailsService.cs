@@ -21,10 +21,10 @@ namespace PizzaOrder.Business.Services
 
     public class OrderDetailsService : IOrderDetailsService
     {
-        private readonly PizzaDBContext _dbContext;
+        private readonly DooryContext _dbContext;
         private readonly IEventService _eventService;
 
-        public OrderDetailsService(PizzaDBContext dbContext, IEventService eventService)
+        public OrderDetailsService(DooryContext dbContext, IEventService eventService)
         {
             _dbContext = dbContext;
             _eventService = eventService;

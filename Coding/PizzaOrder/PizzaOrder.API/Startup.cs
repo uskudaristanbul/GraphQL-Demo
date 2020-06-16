@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PizzaOrder.Data;
+using PizzaOrder.Data.Entities;
 using PizzaOrder.GraphQLModels.Schema;
 
 namespace PizzaOrder.API
@@ -35,7 +36,7 @@ namespace PizzaOrder.API
 
             services.AddControllers();
 
-            services.AddDbContext<PizzaDBContext>(
+            services.AddDbContext<DooryContext>(
                 optionsAction: options => options.UseSqlServer(Configuration["ConnectionStrings:DooryDB"]),
                 contextLifetime: ServiceLifetime.Singleton);
 
@@ -53,7 +54,7 @@ namespace PizzaOrder.API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, PizzaDBContext dbContext)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DooryContext dbContext)
         {
             if (env.IsDevelopment())
             {

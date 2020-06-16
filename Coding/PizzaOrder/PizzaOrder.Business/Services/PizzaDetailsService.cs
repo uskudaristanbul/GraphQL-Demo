@@ -18,9 +18,9 @@ namespace PizzaOrder.Business.Services
 
     public class PizzaDetailsService : IPizzaDetailsService
     {
-        private readonly PizzaDBContext _dbContext;
+        private readonly DooryContext _dbContext;
 
-        public PizzaDetailsService(PizzaDBContext dbContext)
+        public PizzaDetailsService(DooryContext dbContext)
         {
             _dbContext = dbContext;
         }

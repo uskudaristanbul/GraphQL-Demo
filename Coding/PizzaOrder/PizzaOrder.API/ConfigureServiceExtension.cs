@@ -15,6 +15,7 @@ using Microsoft.IdentityModel.Tokens;
 using PizzaOrder.Business.Helpers;
 using PizzaOrder.Business.Services;
 using PizzaOrder.Data;
+using PizzaOrder.Data.Entities;
 using PizzaOrder.GraphQLModels;
 using PizzaOrder.GraphQLModels.Enums;
 using PizzaOrder.GraphQLModels.InputTypes;
@@ -32,7 +33,7 @@ namespace PizzaOrder.API
         {
             // Added Identity
             services.AddIdentity<IdentityUser, IdentityRole>()
-                .AddEntityFrameworkStores<PizzaDBContext>()
+                .AddEntityFrameworkStores<DooryContext>()
                 .AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>

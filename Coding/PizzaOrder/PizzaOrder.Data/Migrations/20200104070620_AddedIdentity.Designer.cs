@@ -6,10 +6,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PizzaOrder.Data;
+using PizzaOrder.Data.Entities;
 
 namespace PizzaOrder.Data.Migrations
 {
-    [DbContext(typeof(PizzaDBContext))]
+    [DbContext(typeof(DooryContext))]
     [Migration("20200104070620_AddedIdentity")]
     partial class AddedIdentity
     {

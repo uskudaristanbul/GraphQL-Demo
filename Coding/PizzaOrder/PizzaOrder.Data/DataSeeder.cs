@@ -7,7 +7,7 @@ namespace PizzaOrder.Data
 {
     public static class DataSeeder
     {
-        public static void EnsureDataSeeding(this PizzaDBContext dbContext
+        public static void EnsureDataSeeding(this DooryContext dbContext
             )
         {
             if (!dbContext.OrderDetails.Any())
