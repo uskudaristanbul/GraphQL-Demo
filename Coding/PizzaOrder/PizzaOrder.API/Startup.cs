@@ -36,7 +36,7 @@ namespace PizzaOrder.API
             services.AddControllers();
 
             services.AddDbContext<PizzaDBContext>(
-                optionsAction: options => options.UseSqlServer(Configuration["ConnectionStrings:PizzaOrderDB"]),
+                optionsAction: options => options.UseSqlServer(Configuration["ConnectionStrings:DooryDB"]),
                 contextLifetime: ServiceLifetime.Singleton);
 
             services.AddCustomIdentityAuth();
