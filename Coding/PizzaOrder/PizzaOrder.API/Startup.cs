@@ -74,7 +74,7 @@ namespace PizzaOrder.API
                 endpoints.MapControllers();
             });
 
-            dbContext.EnsureDataSeeding();
+            //dbContext.EnsureDataSeeding();
 
             app.UseWebSockets();
 

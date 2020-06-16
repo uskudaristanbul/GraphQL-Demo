@@ -2,7 +2,7 @@
 
 namespace PizzaOrder.Business.Models
 {
-    public class OrderDetailsModel
+    public class ProductModel
     {
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
